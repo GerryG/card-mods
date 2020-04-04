@@ -115,7 +115,7 @@ class CsvFile
   end
 
   def header_row?
-    return unless first_row = @rows.first.map { |h| h.to_name.key.to_sym }
+    return unless first_row = @rows.first.map { |h| h.to_sym }
     @row_class.columns.all? do |item|
       first_row.include? item
     end
